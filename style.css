@@ -1,0 +1,326 @@
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&family=Kumbh+Sans:wght@100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Orange: hsl(26, 100%, 55%);
+  --Pale-orange: hsl(25, 100%, 94%);
+  --Very-dark-blue: hsl(220, 13%, 13%);
+  --Dark-grayish-blue: hsl(219, 9%, 45%);
+  --Grayish-blue: hsl(220, 14%, 75%);
+  --Light-grayish-blue: hsl(223, 64%, 98%);
+  --White: hsl(0, 0%, 100%);
+  --Black: hsl(0, 0%, 0%);
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1320px;
+  height: 100vh;
+  background-color: var(--White);
+  margin: auto;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+.Nav {
+  border-bottom: 1px solid var(--Dark-grayish-blue);
+}
+.Nav li {
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--Dark-grayish-blue);
+  position: relative;
+}
+.Nav li::after {
+  content: "";
+  width: 0%;
+  background-color: var(--Orange);
+  height: 4px;
+  position: absolute;
+  bottom: -45px;
+  left: 0;
+  transition: 0.3s ease;
+}
+.Nav li:hover::after {
+  width: 100%;
+  transition: 0.3s ease;
+}
+.Nav li.active {
+  color: var(--Orange);
+}
+
+.Thump img {
+  cursor: pointer;
+  width: 107px;
+  height: 107px;
+  border-radius: 10px;
+}
+.Thump img:hover:not(li.active) {
+  opacity: 0.5;
+  transition: 0.3s ease;
+  border-radius: 0;
+}
+.Thump img.active {
+  opacity: 0.5;
+  border: 3px solid var(--Orange);
+}
+
+.title {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--Orange);
+}
+
+.details p {
+  color: var(--Dark-grayish-blue);
+}
+
+.discount {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--Orange);
+  background-color: var(--Pale-orange);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.price_original {
+  font-weight: 400;
+  font-size: 1.1rem;
+  color: var(--Dark-grayish-blue);
+  text-decoration: line-through;
+}
+
+.Quantity {
+  background-color: var(--Light-grayish-blue);
+  padding: 15px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.Quantity span {
+  cursor: pointer;
+  color: var(--Orange);
+}
+
+.count {
+  color: var(--Black) !important;
+}
+
+.Add_To_Cart {
+  background-color: var(--Orange);
+  padding: 15px;
+  width: 200px;
+  border-radius: 10px;
+  color: var(--White);
+}
+
+.count_notif {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background-color: var(--Orange);
+  color: var(--White);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#remove {
+  cursor: pointer;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 400px;
+  position: absolute;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+  background-color: var(--White);
+  padding: 15px;
+  top: 62px;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.title_cart {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--Black);
+  border-bottom: 1px solid var(--Grayish-blue);
+  padding-bottom: 15px;
+  width: 100%;
+}
+
+.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  margin: auto;
+}
+
+.removeItem {
+  cursor: pointer;
+}
+
+.none {
+  display: none !important;
+}
+
+.title_cart_item {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--Grayish-blue);
+}
+
+.price_cart_item {
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--Grayish-blue);
+}
+
+.total_price {
+  color: var(--Black) !important;
+  font-weight: 700 !important;
+}
+
+.checkout {
+  background-color: var(--Orange);
+  color: var(--White);
+  width: 100%;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.heddin {
+  opacity: 0;
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  transition: all 1s;
+}
+
+.menu_left_links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 250px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+  height: 100vh;
+  padding: 2rem 3rem;
+  background-color: var(--White);
+}
+.menu_left_links .iconClose {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 1.4rem;
+}
+.menu_left_links li.active {
+  color: var(--Orange);
+  font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  .Left_Nav i {
+    display: flex !important;
+  }
+  .Left_Nav ul {
+    display: none !important;
+  }
+  .body {
+    flex-direction: column !important;
+    padding: 0rem 0 !important;
+    gap: 1rem !important;
+  }
+  .body .Images {
+    width: 100% !important;
+  }
+  .body .Images img {
+    border-radius: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+  .body .Images .Thump {
+    display: none !important;
+  }
+  .body .details {
+    width: 100% !important;
+    padding: 0 2rem;
+    gap: 1rem !important;
+    margin-bottom: 1rem !important;
+  }
+  .body .details .Heading {
+    font-size: 2rem !important;
+    width: 80%;
+  }
+  .body .details .price_all {
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .body .details .buttons {
+    flex-direction: column !important;
+    width: 100%;
+  }
+  .body .details .buttons .Quantity {
+    width: 100% !important;
+    padding: 25px !important;
+  }
+  .body .details .buttons .Add_To_Cart {
+    width: 100% !important;
+    padding: 20px !important;
+  }
+  .menu {
+    left: -263px;
+  }
+  .img_prim_all {
+    width: 100% !important;
+    height: 100% !important;
+  }
+  .arrow_right {
+    display: flex !important;
+  }
+  .arrow_left {
+    display: flex !important;
+  }
+}
+.arrow {
+  background-color: var(--White);
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}/*# sourceMappingURL=style.css.map */

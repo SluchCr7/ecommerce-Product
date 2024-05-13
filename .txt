@@ -1,0 +1,43 @@
+<div className='Left_side'>
+            <Image
+                src={"/image-product-1.jpg"}
+                alt="Main Product Image"
+                width={170}
+                height={170}
+                className='img_primary'
+                id='img'
+            />
+            <div className='Images grid grid-cols-4 gap-3 images'>
+                <Image
+                    src={"/image-product-1-thumbnail.jpg"}
+                    alt="Main Product Image"
+                    width={170}
+                    height={170}
+                    className='img_thumbnail one active'
+                    />
+                <Image
+                    src={"/image-product-2-thumbnail.jpg"}
+                    alt="Main Product Image"
+
+                    width={170}
+                    height={170}
+                    className='img_thumbnail two'
+                />
+                <Image
+                    src={"/image-product-3-thumbnail.jpg"}
+                    alt="Main Product Image"
+
+                    width={170}
+                    height={170}
+                    className='img_thumbnail three'
+                />
+                <Image
+                    src={"/image-product-4-thumbnail.jpg"}
+                    alt="Main Product Image"
+
+                    width={170}
+                    height={170}
+                    className='img_thumbnail four'
+                />
+            </div>
+        </div>

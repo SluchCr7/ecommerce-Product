@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | E-commerce product page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[white] max-w-[1340px] min-h-[100vh] m-auto">
+  <div class="main flex flex-col items-center">
+    <div class="Nav flex flex-row items-center justify-between w-full bg-[white] py-[2rem] px-[4rem]">
+      <div class="Left_Nav flex flex-row items-center gap-[2rem]">
+        <i class="fas fa-bars fa-1x menuIcon none" id="menuIcon"></i>
+        <img src="images/logo.svg" alt="Logo" class="Logo">
+        <ul class="flex flex-row items-center gap-[1.5rem] list-none relative top-[2px]">
+          <li class="active">Collections</li>
+          <li>Men</li>
+          <li>Woman</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+      </div>
+      <div class="Right_Nav flex flex-row items-center gap-[20px] relative">
+        <div class="relative">
+          <img src="images/icon-cart.svg" alt="" class="Cart w-[20px] h-[20px]" id="cartMenu">
+          <span class="count_notif " id="count_notif">0</span>
+        </div>
+        <img src="images/image-avatar.png" alt="" class="photo w-[50px] h-[50px]">
+  
+  
+        <div class="menu none heddin" id="menu">
+          <span class="title_cart">Cart</span>
+          <div class="empty p-6" id="empty">
+            <span class="text-[1.1rem] text-[black] font-bold">Your cart is empty</span>
+          </div>
+          <div class="content none flex flex-col items-center gap-3 py-5" id="content">        
+          </div>
+          <button class="checkout"  id="checkout">Checkout</button>
+        </div>
+  
+  
+      </div>
+    </div>
+    <div class="body w-full flex flex-row items-center gap-[2rem] p-[3rem]" id="bodyEle">
+      <div class="Images w-[50%] flex flex-col items-center gap-[1rem]">
+        <div class="img_prim_all w-[80%] h-[80%] rounded-[10px] relative">
+          <i class="arrow arrow_right none fas fa-angle-right fa-3x absolute right-0 top-[50%]"></i>
+          <img src="images/image-product-1.jpg" alt="" class=" img_prim object-cover w-[100%] h-[100%] rounded-[10px]" id="img">
+          <i class="arrow arrow_left none fas fa-angle-left fa-3x absolute left-0 bottom-[42%]"></i>
+        </div>
+        <div class="Thump flex flex-row items-center gap-[20px]">
+          <img src="images/image-product-1-thumbnail.jpg" alt="" class="active">
+          <img src="images/image-product-2-thumbnail.jpg" alt="">
+          <img src="images/image-product-3-thumbnail.jpg" alt="">
+          <img src="images/image-product-4-thumbnail.jpg" alt="">
+        </div>
+      </div>
+      <div class="details flex flex-col items-start w-[50%]">
+        <span class="title">Sneakers Company</span>
+        <span class="Heading text-[3.5rem] font-bold"  id="title">Fall Limited Edatiton Sneakers</span>
+        <p class="text-[.9rem] w-[90%] py-[10px]">These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+        <div class="price_all flex flex-col items-start gap-[20px]">
+          <div class="Price flex flex-row items-center gap-[20px]">
+            <span class="price text-[1.7rem] font-bold">$ <span id="price">125</span></span>
+            <span class="discount" id="descount">50%</span>
+          </div>
+          <span class="price_original" id="or_sale">$250.00</span>
+        </div>
+        <div class="buttons mt-[20px] flex flex-row items-center gap-[20px]">
+          <div class="Quantity flex flex-row items-center gap-[30px]">
+            <span class="material-icons" id="mince">remove</span>
+            <span class="count" id="count">0</span>
+            <span class="material-icons" id="plus">add</span>
+          </div>
+          <button class="Add_To_Cart flex flex-row items-center justify-center font-bold" id="addToCart"> Add to cart</button>
+      </div>
+    </div>
+    <div class="menu_left_links none heddin" id="menu_left_links">
+      <i class="fas fa-times fa-1x close" id="closeicon"></i>
+      <ul class="flex flex-col items-start mt-5 gap-[1.5rem] list-none relative top-[2px]">
+        <li class="active">Collections</li>
+        <li>Men</li>
+        <li>Woman</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+    </div>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
